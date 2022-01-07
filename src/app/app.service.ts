@@ -10,9 +10,7 @@ export class AppService {
 
   baseUrl = 'https://swapi.dev/api/people';
 
-  // baseUrl = 'https://akabab.github.io/starwars-api/api/all.json';
-
-    constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
     return this.http.get<any>(this.baseUrl);
