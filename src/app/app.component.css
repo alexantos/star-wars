@@ -1,0 +1,29 @@
+.background {
+    background-color: #1c1c1c;
+}
+
+.btn-color {
+    color: white;
+}
+
+.spacer {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.container {
+    padding: 0.5em;
+}
+
+table {
+    width: 100%;
+}
+
+.button-spacer {
+    flex: 1 1 auto;
+}
+
+.background-buttons {
+    padding: 0;
+    background-color: white;
+}
