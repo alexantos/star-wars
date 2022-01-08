@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+}
+
+.button-spacer {
+    flex: 1 1 auto;
+}
+
+.background-buttons {
+    padding: 0;
+    background-color: white;
+}
+
+.select {
+    cursor: pointer;
+}
+
+.spacer {
+    padding-left: 1em;
+    padding-right: 1em;
+}

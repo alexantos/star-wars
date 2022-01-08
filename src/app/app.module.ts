@@ -10,11 +10,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { PeopleComponent } from './people/people.component';
+import { PeopledetailComponent } from './peopledetail/peopledetail.component';
+import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PeopleComponent,
+    PeopledetailComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatToolbarModule,
     MatButtonModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCardModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

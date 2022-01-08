@@ -5,7 +5,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+export class PeopledetailService {
 
-export class AppService {
+  constructor(private http: HttpClient) { }
 
+  getPeople(url: string): Observable<any> {
+    return this.http.get<any>(url)
+  }
 }

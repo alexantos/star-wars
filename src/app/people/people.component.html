@@ -1,0 +1,24 @@
+<table mat-table [dataSource]="datasource" class="mat-elevation-z2">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let people">{{people.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="birth">
+        <th mat-header-cell *matHeaderCellDef>Birth Year</th>
+        <td mat-cell *matCellDef="let people"><span *ngIf="people.birth_year != 'unknown'">{{people.birth_year}}</span></td>
+    </ng-container>
+
+    <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef>Gender</th>
+        <td mat-cell *matCellDef="let people"><span *ngIf="people.gender != 'n/a'">{{people.gender}}</span></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="select" mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectPeople(row)"></tr>
+</table>
+<mat-toolbar class="background-buttons">
+    <button mat-raised-button (click)="previousPage()">Previous Page</button>
+    <span class="button-spacer"></span>
+    <button mat-raised-button (click)="nextPage()">Next Page</button>
+</mat-toolbar>
